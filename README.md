@@ -1,11 +1,16 @@
 # shareTools
 
-文件共享 和 共享文本合并在一起
+## 包含简单的 上传、下载文档 和 共享记事本 
+	默认 端口80 分享本地，上传限制大小 100MB
 
-启动时参数说明
-`
-	ip             默认获取ip
-	port           默认端口 默认 :80
-	uploadPath     目录文档 默认当前目录
-	uploadMaxSize  上传限制大小 默认10MB
-`
+## 更改本地ip使用说明
+```
+	-ip string
+		Ip Address
+	-port string
+		ServerPort (default ":80")
+	-uploadDir string
+		Upload Dir (default "./")
+	-uploadMaxSize int
+		Upload File Max Size Default Unit MB (default 100)
+```
