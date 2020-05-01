@@ -10,10 +10,10 @@ import (
 )
 
 var (
-	ip            = flag.String("ip", "localhost", "Ip Address")                            // 默认获取ip
-	port          = flag.String("port", ":80", "ServerPort")                                // 默认端口
-	uploadPath    = flag.String("uploadDir", "./", "Upload Dir")                            // 目录
-	uploadMaxSize = flag.Int64("uploadMaxSize", 10, "Upload File Max Size Default Unit MB") // 10MB
+	ip            = flag.String("ip", "", "Ip Address")                                      // 默认获取ip
+	port          = flag.String("port", ":80", "ServerPort")                                 // 默认端口
+	uploadPath    = flag.String("uploadDir", "./", "Upload Dir")                             // 目录
+	uploadMaxSize = flag.Int64("uploadMaxSize", 100, "Upload File Max Size Default Unit MB") // 10MB
 )
 
 func init() {
@@ -25,16 +25,17 @@ func main() {
 	http.Handle("/webSocket", websocket.Handler(webSocket))
 
 	localIp := GetIp()
-	if *ip != "localhost" {
-		localIp = *ip
+	addr := *ip + *port
+	if *ip == "" {
+		ip = &localIp
 	}
 	Warnf("Start Server IP--[%v]  Port--[%v]  Share Path--[%v]  Max Upload Size--[%v MB]",
-		localIp,
+		*ip,
 		*port,
 		*uploadPath,
 		*uploadMaxSize,
 	)
-	Error(http.ListenAndServe(*port, nil))
+	Error(http.ListenAndServe(addr, nil))
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
