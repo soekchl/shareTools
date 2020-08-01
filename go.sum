@@ -3,6 +3,8 @@ github.com/go-ole/go-ole v1.2.4/go.mod h1:XCwSNxSkXRo4vlyPy93sltvi/qJq0jqQhjqQNI
 github.com/shirou/gopsutil v2.20.3+incompatible/go.mod h1:5b4v6he4MtMOwMlS0TUMTu2PcXUg8+E1lC7eC3UO/RA=
 github.com/soekchl/myUtils v1.0.0 h1:pBWk+l911OD1RukPUb8uyWwRgNRVBSpTqwbPn7XOOnE=
 github.com/soekchl/myUtils v1.0.0/go.mod h1:9hrc1z0glDmcdy0AuO/ENhsM6Wcm1cKoBGIAhQPj+ZU=
+github.com/soekchl/myUtils v1.0.2-0.20200801053027-3ab2bcd8f511 h1:nN06V8MQsY3feKLh6gExjihwaY+YZ/hgkNSsfe9le/E=
+github.com/soekchl/myUtils v1.0.2-0.20200801053027-3ab2bcd8f511/go.mod h1:9hrc1z0glDmcdy0AuO/ENhsM6Wcm1cKoBGIAhQPj+ZU=
 github.com/soekchl/websocket v0.0.0-20130122144708-14f8b2f699a3 h1:HJkgOKzAeIjTnyHBH/w9VxMeT2PFRD8F4UNuBNowNcY=
 github.com/soekchl/websocket v0.0.0-20130122144708-14f8b2f699a3/go.mod h1:xLbDluhBEVhxEPAbiv3EDHH7IIyQYTowQc9J00xpkgU=
 golang.org/x/sys v0.0.0-20200409092240-59c9f1ba88fa/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
